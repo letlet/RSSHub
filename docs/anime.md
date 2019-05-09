@@ -26,6 +26,10 @@
 
 <Route name="文章" author="DIYgod" example="/mmgal" path="/mmgal"/>
 
+## say 花火
+
+<Route name="文章" author="junfengP" example="/sayhuahuo" path="/sayhuahuo"/>
+
 ## 终点分享
 
 <Route name="最新汉化" author="junfengP" example="/zdfx" path="/zdfx"/>
@@ -37,6 +41,10 @@
 ## 動畫狂
 
 <Route name="漫画更新" author="KellyHwong" path="/cartoonmad/comic/:id" example="/cartoonmad/comic/5827" :paramsDesc="['漫画ID']"/>
+
+## 咚漫
+
+<Route name="漫画更新" author="Machsix" path="/dongmanmanhua/comic/:category/:name/:id" example="/dongmanmanhua/comic/COMEDY/xin-xinlingdeshengyin/381" :paramsDesc="['类别','名称','ID']"/>
 
 ## Anime1
 
