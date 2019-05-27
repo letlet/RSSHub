@@ -68,7 +68,7 @@ pageClass: routes
 
 ### 硕士研究生招生通知
 
-<Route author="ihewro" example="/bupt/yz/int" path="/bupt/yzwf/:type" :paramsDesc="['学院英文缩写']">
+<Route author="ihewro" example="/bupt/yz/int" path="/bupt/yz/:type" :paramsDesc="['学院英文缩写']">
 
 | 综合 | 信息与通信工程学院 | 电子工程学院 | 计算机学院 | 自动化学院 | 软件学院 | 数字媒体与设计艺术学院 | 网络空间安全学院 | 理学院 | 经济管理学院 | 人文学院 | 马克思主义学院 | 网络技术研究院 | 信息光子学与光通信研究院 |
 | ---- | ------------------ | ------------ | ---------- | ---------- | -------- | ---------------------- | ---------------- | ------ | ------------ | -------- | -------------- | -------------- | ------------------------ |
@@ -778,6 +778,18 @@ https://rsshub.app/**nuist**/`bulletin` 或 https://rsshub.app/**nuist**/`bullet
 | 全部 | 信息发布 | 通知公告 | 教务信息 | 教学研究 | 教学实践 | 招生信息 | 质量监控 |
 | :--: | :------: | :------: | :------: | :------: | :------: | :------: | :------: |
 | all  |   xxfb   |   tzgg   |   jwxx   |   jxyj   |   jxsj   |   zsxx   |   zljk   |
+
+</Route>
+
+## 西南财经大学
+
+### 经济信息工程学院
+
+<Route author="Hivol" example="/swufe/seie/tzgg" path="/universities/swufe/seie/:type?" :paramsDesc="['分类名(默认为tzgg)']" >
+
+| 学院新闻 | 通知公告 |
+| -------- | -------- |
+| xyxw     | tzgg     |
 
 </Route>
 
