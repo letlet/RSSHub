@@ -340,17 +340,7 @@ pageClass: routes
 
 ### 频道
 
-<Route author="DIYgod" example="/telegram/channel/awesomeDIYgod" path="/telegram/channel/:username" :paramsDesc="['频道 username']">
-
-::: tip 提示
-
-订阅要求: 将机器人 [@RSSHub_bot](https://t.me/RSSHub_bot) 加为频道管理员, 然后发一条消息后才可正常获取数据
-
-如果是私有频道，`username`请传入频道`id`(比如`-1001001234567`)，具体获取可参考[这里](https://stackoverflow.com/questions/33858927/how-to-obtain-the-chat-id-of-a-private-telegram-channel)
-
-:::
-
-</Route>
+<Route author="DIYgod" example="/telegram/channel/awesomeDIYgod" path="/telegram/channel/:username" :paramsDesc="['频道 username']"/>
 
 ### 贴纸包
 
@@ -358,15 +348,15 @@ pageClass: routes
 
 ## Twitter
 
-### 用户
+### 用户时间线
 
 <Route author="DIYgod" example="/twitter/user/DIYgod" path="/twitter/user/:id" :paramsDesc="['用户 twitter 名']"/>
 
-### 列表
+### 列表时间线
 
 <Route author="xyqfer" example="/twitter/list/ladyleet/javascript" path="/twitter/list/:id/:name" :paramsDesc="['用户 twitter 名', 'list 名称']"/>
 
-### Likes
+### 用户喜欢列表
 
 <Route author="xyqfer" example="/twitter/likes/DIYgod" path="/twitter/likes/:id" :paramsDesc="['用户 twitter 名']"/>
 
@@ -494,6 +484,8 @@ pageClass: routes
 
 <Route author="Maecenas" example="/vocus/publication/bass" path="/vocus/publication/:id" :paramsDesc="['出版專題 id，可在出版專題主页的 URL 找到']"/>
 
+<Route author="LogicJake" example="/vocus/user/tsetyan" path="/vocus/user/:id" :paramsDesc="['用户 id，可在用户主页的 URL 找到']"/>
+
 ## 好奇心日报
 
 ### 分类
@@ -516,15 +508,9 @@ pageClass: routes
 
 ## 即刻
 
-::: warning 注意
-
-即刻圈子较为复杂, 部分圈子可能出现不适配的情况. 如出现上述情况请[提 Issue](https://github.com/DIYgod/RSSHub/issues).
-
-:::
-
 ### 圈子-精选
 
-<Route author="DIYgod" example="/jike/topic/54dffb40e4b0f57466e675f0" path="/jike/topic/:id" :paramsDesc="['圈子 id, 可在即刻 web 端圈子页或 APP 分享出来的圈子页 URL 中找到']"/>
+<Route author="DIYgod" example="/jike/topic/54dffb40e4b0f57466e675f0" path="/jike/topic/:id" :paramsDesc="['圈子 id, 可在即刻 web 端圈子页或 APP 分享出来的圈子页 URL 中找到']" crawlerBadge="1"/>
 
 ::: tip 提示
 
@@ -534,19 +520,19 @@ pageClass: routes
 
 ### 圈子-广场
 
-<Route author="DIYgod" example="/jike/topic/square/54dffb40e4b0f57466e675f0" path="/jike/topic/square/:id" :paramsDesc="['圈子 id, 可在即刻 web 端圈子页或 APP 分享出来的圈子页 URL 中找到']"/>
+<Route author="DIYgod" example="/jike/topic/square/54dffb40e4b0f57466e675f0" path="/jike/topic/square/:id" :paramsDesc="['圈子 id, 可在即刻 web 端圈子页或 APP 分享出来的圈子页 URL 中找到']" crawlerBadge="1"/>
 
 ### 圈子-纯文字
 
-<Route author="HenryQW" example="/jike/topic/text/553870e8e4b0cafb0a1bef68" path="/jike/topic/text/:id" :paramsDesc="['圈子 id, 可在即刻 web 端圈子页或 APP 分享出来的圈子页 URL 中找到']"/>
+<Route author="HenryQW" example="/jike/topic/text/553870e8e4b0cafb0a1bef68" path="/jike/topic/text/:id" :paramsDesc="['圈子 id, 可在即刻 web 端圈子页或 APP 分享出来的圈子页 URL 中找到']" crawlerBadge="1"/>
 
 ### 用户动态
 
-<Route author="DIYgod" example="/jike/user/82D23B32-CF36-4C59-AD6F-D05E3552CBF3" path="/jike/user/:id" :paramsDesc="['用户 id, 可在即刻 web 端用户页 URL 中找到']"/>
+<Route author="DIYgod" example="/jike/user/82D23B32-CF36-4C59-AD6F-D05E3552CBF3" path="/jike/user/:id" :paramsDesc="['用户 id, 可在即刻 web 端用户页 URL 中找到']" crawlerBadge="1"/>
 
 ### 即刻小报
 
-<Route author="Andiedie" example="/jike/daily" path="/jike/daily"/>
+<Route author="Andiedie" example="/jike/daily" path="/jike/daily" crawlerBadge="1"/>
 
 ## 简书
 
@@ -640,7 +626,7 @@ pageClass: routes
 
 ### 公众号（即刻来源）
 
-<Route author="DIYgod" example="/jike/topic/584b8ac671a288001154a115" path="/jike/topic/:id" :paramsDesc="['参考 [即刻-圈子-精选](#/jike/topic/:id)']"/>
+<Route author="DIYgod" example="/jike/topic/584b8ac671a288001154a115" path="/jike/topic/:id" :paramsDesc="['参考 [即刻-圈子-精选](#/jike/topic/:id)']" crawlerBadge="1"/>
 
 ### 公众号（瓦斯来源）
 
@@ -653,6 +639,16 @@ pageClass: routes
 ### 公众号（传送门来源）
 
 <Route author="HenryQW" example="/wechat/csm/huxiu_com" path="/wechat/csm/:id" :paramsDesc="['公众号 id, 打开公众号页, 在 URL 中找到 id']"/>
+
+### 公众号（Telegram 频道来源）
+
+<Route author="LogicJake" example="/wechat/tgchannel/lifeweek" path="/wechat/tgchannel/:id" :paramsDesc="['公众号绑定频道 id']">
+
+::: warning 注意
+
+该方法需要通过 efb 进行频道绑定，具体操作见[https://github.com/DIYgod/RSSHub/issues/2172](https://github.com/DIYgod/RSSHub/issues/2172)
+:::
+</Route>
 
 ### 公众平台系统公告栏目
 
