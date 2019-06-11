@@ -68,6 +68,20 @@ pageClass: routes
 
 <Route author="lalxyy" example="/checkee/2019-03" path="/checkee/:month" :paramsDesc="['签证被 check 的年份-月份，如 2019-03']" />
 
+## cnBeta
+
+### 最新
+
+<Route author="kt286" example="/cnbeta" path="/cnbeta"/>
+
+## Dilbert Comic Strip
+
+<Route name="Daily Strip" author="Maecenas" example="/dilbert/strip" path="/dilbert/strip">
+
+通过提取漫画，提供比官方源更佳的阅读体验。
+
+</Route>
+
 ## DoNews
 
 ### 栏目
@@ -849,6 +863,11 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="LogicJake" example="/mpaypass/news" path="/mpaypass/news"/>
 
+### 分类
+
+<Route author="zhuan-zhu" example="/mpaypass/main/policy" path="mpaypass/main/:type?"
+:paramsDesc="['新闻类型,类型可在URL中找到，类似policy，eye等，空或其他任意值展示最新新闻']"/>
+
 ## 油价
 
 ### 今日油价
@@ -896,9 +915,3 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 全文
 
 <Route author="HenryQW" example="/zzz" path="/zzz/index"/>
-
-## cnBeta
-
-### 最新
-
-<Route author="kt286" example="/cnbeta" path="/cnbeta"/>
