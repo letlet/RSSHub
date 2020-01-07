@@ -4,6 +4,12 @@ pageClass: routes
 
 # 音视频
 
+## 60-Second Science - Scientific American
+
+### Transcript
+
+<Route author="emdoe" example="/60s-science/transcript" path="/60s-science/transcript"/>
+
 ## 99% Invisible
 
 ### Transcript
@@ -119,6 +125,12 @@ pageClass: routes
 <Route author="wolfyu1991"  example="/mp4ba/复仇者联盟" path="/mp4ba/:keyword" :paramsDesc="['搜索关键字']" supportBT="1"/>
 
 </Route>
+
+## Nyaa
+
+### 搜索结果
+
+<Route author="Lava-Swimmer" example="/nyaa/search/psycho-pass" path="/nyaa/search/:keyword" :paramsDesc="['搜索关键字']" supportBT="1"/>
 
 ## rs05 人生 05 电影
 
@@ -270,11 +282,17 @@ pageClass: routes
 
 <Route author="dearrrfish" example="/ningmeng/song" path="/ningmeng/song" />
 
+## 片源网
+
+### 最新资源
+
+<Route author="greatcodeeer" example="/pianyuan" path="/pianyuan" radar="1"/>
+
 ## 色花堂中文论坛
 
 ### 原创 BT 电影
 
-<Route author="qiwihui junfengP" example="/dsndsht23" path="/dsndsht23/:subforumid?" supportBT="1" :paramsDesc="['版块 id, 为空默认高清中文字幕']">
+<Route author="qiwihui junfengP" example="/dsndsht23/36/368" path="/dsndsht23/:subforumid?/:type?" supportBT="1" :paramsDesc="['版块 id 或板块名称（见下表）, 为空默认高清中文字幕', '类型 id, 可在分区类型过滤后的 URL 中找到']">
 
 | 每日合集 | 国产原创 | 亚洲无码原创 | 亚洲有码原创 | 高清中文字幕 | 三级写真 | 亚洲名站有码 | VR 系列 | 欧美无码 | 动漫原创 | AI 换脸电影 | 原档收藏 WMV |
 | -------- | -------- | ------------ | ------------ | ------------ | -------- | ------------ | ------- | -------- | -------- | ----------- | ------------ |
